@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'aboutme',
+        'NAME': 'me',
         'USER': 'erick',
         'PASSWORD': 'qwerty12345',
     }
