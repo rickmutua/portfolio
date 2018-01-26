@@ -1,0 +1,103 @@
+{% extends 'me/base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {% block content %}
+
+        {{ block.super }}
+
+
+            <div class="container-fluid" id="project">
+                
+                <div class="col-md-6">
+
+                    <br>
+
+                    {% for item in screenshots %}
+
+                        <img style="height: 95vh;" src="{{ item.image.url }}" alt="Image" class="img-responsive">
+
+                    {% endfor %}
+                    
+                </div>
+                
+                <div class="col-md-6" id="project-info">
+
+                    {% if project %}
+
+                        <h2> {{ project.name }} </h2>
+
+                            <br>
+
+                        <p> {{ project.about }} </p>
+
+                            <br>
+
+                        <p> {{ project.description }} </p>
+
+                    {% endif %}
+
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+
+                            {% if tags %}
+
+                                <h3> Tech </h3>
+
+                                    {% for tag in tags %}
+
+                                        <li style="padding-left: 10px; color: #b8b8b8;"> {{ tag.name }} </li>
+
+                                    {% endfor %}
+
+                            {% endif %}
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        {% if project.deployed_site %}
+
+                            <h3> Deployed Site </h3>
+
+                            <p><a href="{{project.deployed_site}}"> deployed link </a> </p>
+
+                        {% endif %}
+
+                        {% if project.github_repo %}
+
+                            <h3> Github Repo </h3>
+
+                            <p><a href="{{project.github_repo}}"> github repo </a>  </p>
+
+                        {% endif %}
+
+                    </div>
+
+                    </div>
+
+                        <br>
+
+                    <br>
+
+                    <a href="{% url 'index' %}"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Back </a>
+
+                </div>
+                
+            </div>        
+    
+    
+    {% endblock %}
+
+</body>
+</html>

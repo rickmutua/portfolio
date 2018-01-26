@@ -1,0 +1,175 @@
+{% extends 'me/base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {% block content %}
+
+        {{ block.super }}
+
+            <div class="container" style="text-align: center;">
+
+                {% include 'navbar.html' %}
+
+            </div>
+
+
+            <section>
+
+                <div class="container-fluid">
+
+                    <div id="homepage">
+
+                        <a id="home" class="smooth"> </a>
+
+                        <canvas id="canvas" style="top:0; left:0; height: 100vh; width: 100vw;"></canvas>
+
+                        <div id="buffer" style="display:none; width: 100vw;"> </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <a id="about" class="smooth"></a>
+
+            <section id="page2">
+
+                <div class="container">
+
+                   <div>
+
+                       <div class="col-md-6">
+
+                           <h2 style="padding-top: 5%;"> I'm Erick Mutua, a full-stack developer. </h2>
+
+                           <br>
+
+                           <p style="font-size: 18px;"> My skills are broad; from UX to design, front-end to back-end development. I enjoy each aspect and love building sites and web apps from start to finish for clients all over the world. </p>
+
+                           <br>
+
+                           <p style="font-size: 16px;"> Would you like to build something together? <a id="#contact" class="smooth"> get in touch </a> </p>
+
+                       </div>
+
+                       <div class="col-md-6">
+
+                           <h2> What I do </h2>
+
+                           <h3> Front-end </h3>
+
+                           <p> HTML5, CSS3, Javascript </p>
+
+                           <h3> Back-end </h3>
+
+                           <p> Django, Flask, NodeJs, Python, Elixir, PostgreSql </p>
+
+                           <h3> Cloud </h3>
+
+                           <p> Google, Firebase </p>
+
+                           <h3> Others </h3>
+
+                           <p> Unittesting, Computer repair  </p>
+
+                       </div>
+
+                   </div>
+
+                </div>
+
+            </section>
+
+
+            <section id="page3" style="padding-top: 30px; padding-bottom: bottom; text-align: center; height: 100vh;">
+
+                <a id="projects" class="smooth"></a>
+
+                <div class="container">
+
+                    <div>
+
+                        <br>
+
+                        <h1> My Work </h1>
+
+                        <br>
+
+                        {% for project in projects %}
+
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+
+                                <a href="{% url 'project' project.name %}">
+
+                                    <img id="icon" style="height: 400px; width: 100vw;" src="{{ project.icon.url }}" alt="icon" class="img-responsive">
+
+                                </a>
+
+                            </div>
+
+                        {% endfor %}
+
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section id="page4">
+
+                <div class="container">
+
+                    <div>
+
+                        <a id="contact" class="smooth"></a>
+
+                        <h1> Get in touch </h1>
+
+                            <br>
+
+                            <p> Want to get in touch or talk to me about a project? </p>
+
+                            <p> Send me an email to <a href="rick.mutua12@gmail.com">mutuaerick08@gmail.com</a> and lets talk. </p>
+
+                            <p> Let's get social? Follow my online profiles on LinkedIn and Github. </p>
+
+                            <br>
+
+                            <div>
+
+                                <p>
+                                    <a href="https://www.linkedin.com/in/erick-mutua-a46566146" target="_blank" id="linkedin"> <i class="fa fa-linkedin" aria-hidden="true"></i> </a>
+                                    <a href="https://github.com/rickmutua" target="_blank" id="github"> <i class="fa fa-github" aria-hidden="true"> </i> </a>
+                                </p>
+
+                            </div>
+
+                        <p style="text-align:right;"><a href="#home">BACK TO TOP</a></p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+
+
+    {% endblock %}
+
+</body>
+</html>

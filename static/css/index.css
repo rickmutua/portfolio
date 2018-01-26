@@ -1,0 +1,127 @@
+* {margin:0;}
+body {background:#000000;}
+
+#nav {
+    background-color: transparent;
+    border: none;
+    margin-top: 10px;
+    font-family: fantasys;
+    position: fixed;
+}
+
+#page2 {
+    background-color: #181818;
+    color: #cbcbcb;
+    width: 100vw;
+    padding-top: 15%;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+h2 {
+    font-weight: bold;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 40px;
+    color: white;
+}
+
+h3 {
+    font-weight: bold;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+h5 {
+    font-weight: bold;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+p {
+    color: #cbcbcb;
+    font-size: 16px;
+}
+
+#page3 {
+    background-color: #181818;
+    color: #aa9e89;
+    padding-top: 15%;
+    padding-bottom: 30px;
+    width: 100vw;
+}
+
+#page4 {
+    color: #b8b8b8;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100vw;
+}
+
+#linkedin {
+    color: #888888;
+    text-align: center;
+    font-size: 20pt;
+    padding-right: 20px;
+}
+
+#github {
+    color: #888888;
+    text-align: center;
+    font-size: 20pt;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    color: #aa9e89;
+}
+
+a:link    {
+  /* Applies to all unvisited links */
+  text-decoration:  none;
+  font-weight:      bold;
+  color:           white;
+}
+
+a:visited {
+  /* Applies to all visited links */
+  text-decoration:  none;
+  font-weight:      bold;
+  background-color: #ddd;
+}
+
+a:hover   {
+  /* Applies to links under the pointer */
+  text-decoration:  underline;
+  font-weight:      bold;
+  color:            #f0f;
+}
+
+a:active  {
+  /* Applies to activated links */
+  text-decoration:  underline;
+  font-weight:      bold;
+  background-color: black;
+  color: white;
+}
+
+#project {
+    background-color: #181818;
+    height: 100vh;
+}
+
+#project-info {
+    padding-top: 15%;
+}
+
+#icon:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.0.5);
+    transform: scale(1.1);
+}

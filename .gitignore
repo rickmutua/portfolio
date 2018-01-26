@@ -1,0 +1,7 @@
+virtual/
+*.pyc
+.env
+.idea/
+db.sqlite3
+categories.json
+confusables.json
