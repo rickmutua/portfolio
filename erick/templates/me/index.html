@@ -25,7 +25,7 @@
 
                 <div class="container-fluid">
 
-                    <div id="homepage">
+                    <div id="homepage" class="col-sm-6 col-md-6 col-lg-12">
 
                         <a id="home" class="smooth"> </a>
 
@@ -107,7 +107,7 @@
 
                         {% for project in projects %}
 
-                            <div class="col-xs-12 col-sm-4 col-md-4">
+                            <div class="col-xs-12 col-sm-4 col-md-3">
 
                                 <a href="{% url 'project' project.name %}">
 
@@ -115,10 +115,11 @@
 
                                 </a>
 
+                                <br>
+
                             </div>
 
                         {% endfor %}
-
 
 
                     </div>
@@ -151,13 +152,19 @@
                             <div>
 
                                 <p>
-                                    <a href="https://www.linkedin.com/in/erick-mutua-a46566146" target="_blank" id="linkedin"> <i class="fa fa-linkedin" aria-hidden="true"></i> </a>
-                                    <a href="https://github.com/rickmutua" target="_blank" id="github"> <i class="fa fa-github" aria-hidden="true"> </i> </a>
+                                    <a href="https://www.linkedin.com/in/erick-mutua-a46566146" target="_blank" id="linkedin"> <i class="fab fa-linkedin" aria-hidden="true"></i> </a>
+                                    <a href="https://github.com/rickmutua" target="_blank" id="github"> <i class="fab fa-github"></i> </i> </a>
                                 </p>
 
                             </div>
 
-                        <p style="text-align:right;"><a href="#home">BACK TO TOP</a></p>
+                        <p style="text-align:right; font-size: 30px;">
+                            <a href="#home">
+
+                                <i style="font-size: 18px;" class="fas fa-arrow-alt-circle-up"> </i>
+
+                            </a>
+                        </p>
 
                     </div>
 
